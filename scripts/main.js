@@ -1,0 +1,48 @@
+// Check when you have scrolled past the jumbotron
+// then add a class to the nav to make it not transparent
+$(function () {
+    $(document).scroll(function () {
+      var $home = $("#home");
+      var $nav = $(".navbar");
+      $nav.toggleClass("scrolled", $(this).scrollTop() > $home.height())
+    });
+  });
+
+  // For google maps
+  function initMap() {
+    // The location of Uluru
+    var uluru = {
+      lat: 46.574345,
+      lng: -120.541489
+    };
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+      document.getElementById('map'), {
+        zoom: 15,
+        center: uluru
+      });
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+
+  function sendEmail() {
+    var email = document.querySelector("#email").value;
+    var subject = document.querySelector("#subject").value;
+    var body = document.querySelector("#message").value;
+
+    Email.send({
+        SecureToken : "07ad2147-2097-4795-aaad-0a0b8c4932a4",
+        To : "bpwyatt04@gmail.com",
+        From : email,
+        Subject : subject,
+        Body : body
+    }).then(
+    //   message => alert(message)
+        document.querySelector("#email-sent").classList.remove("d-none")
+    );
+  }
+
+  document.querySelector("#send-email").addEventListener("click", sendEmail);
