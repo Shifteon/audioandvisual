@@ -18,10 +18,14 @@ hr {
 }
 
 /* Remove this for the nav to not be transparent */
-.navbar {
+.transparent.navbar {
     background-color: transparent;
     background: transparent;
     border-color: transparent;
+}
+
+.navbar {
+    background-color: #16515e;
     transition: background 500ms;
 }
 
@@ -34,7 +38,7 @@ hr {
 }
 
 .jumbotron {
-    background: url(https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-image: url("https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-position: center;
     background-size: cover;
     height: 1000px;
@@ -69,6 +73,10 @@ hr {
 
 .image-hover:hover {
     box-shadow: 1px 1px 1px #AFC1C6;
+}
+
+.bbl {
+    border-left: 3px solid #16515e;
 }
 
 #our_products {

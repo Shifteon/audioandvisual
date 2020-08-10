@@ -1,0 +1,11 @@
+.jumbotron {
+    /* background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+    background: none;
+    color: black;
+    height: 450px;
+}
+
+.content {
+    margin-top: 1%;
+    background: none;
+}
